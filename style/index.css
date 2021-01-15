@@ -86,6 +86,9 @@ h2 {
 
 header nav {
     margin-left: 5%;
+    width: 30%;
+    height: auto;
+    display: flex;
 }
 
 header nav a {
@@ -93,6 +96,8 @@ header nav a {
     background: #daf0ee;
     font-size: 1rem;
     margin: 0 auto;
+    width: 25%;
+    text-align: center;
 }
 
 .home {
@@ -103,6 +108,7 @@ header nav a {
 nav a {
     text-decoration: none;
     color: #3b413c;
+    padding: 1.5% 0;
 }
 
 .intro {
@@ -125,6 +131,8 @@ nav a {
 }
 
 .intro-text {
+    display: flex;
+    flex-direction: column;
     max-width: 45%;
 }
 
@@ -181,6 +189,15 @@ footer {
     padding: 2rem 0;
 }
 
+.contact-container {
+    width: 50%;
+    text-align: center;
+}
+
+footer nav {
+    text-align: center;
+}
+
 footer nav a {
     transition-duration: 0.2s;
 }
@@ -190,7 +207,7 @@ footer nav a:hover {
 }
 
 .contact-button {
-    padding: 10%;
+    padding: 3%;
     text-decoration: none;
     color: black;
     background: #daf0ee;
@@ -204,4 +221,59 @@ footer nav a:hover {
 
 i {
     font-size: 4rem;
+}
+
+@media(max-width: 800px) {
+    .project {
+        flex: 1 0 calc(100% / 4);
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .project {
+        flex: 1 0 calc(100% / 3);
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header {
+        align-items: center;
+        background-color: white;
+        border-bottom: none;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    header nav a {
+        width: 90%;
+        font-size: 2rem;
+        padding: 3% 0;
+    }
+
+    .intro {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    body {
+        font-size: 1.6rem;
+    }
 }
