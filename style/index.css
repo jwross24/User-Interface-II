@@ -31,8 +31,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    color: #3b413c;
-    font-size: 1rem;
 }
 ol, ul {
 	list-style: none;
@@ -50,7 +48,13 @@ table {
 	border-spacing: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
+    color: #3b413c;
+    font-size: 1.2rem;
     font-family:'Nunito Sans', sans-serif;
 }
 
@@ -64,59 +68,72 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #9db5b2;
+    background: #9db5b2;
     width: 100%;
     height: 10rem;
     border-bottom: 2px solid black;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 700;
     margin-left: 3%;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 header nav {
     margin-left: 5%;
+    width: 30%;
+    height: auto;
+    display: flex;
 }
 
 header nav a {
     border: 1px solid #3b413c;
-    background-color: #daf0ee;
-    font-size: 0.85rem;
+    background: #daf0ee;
+    font-size: 1rem;
     margin: 0 auto;
+    width: 25%;
+    text-align: center;
 }
 
-.links #home {
+.home {
     color: #daf0ee;
-    background-color: #3b413c
+    background: #3b413c
 }
 
 nav a {
     text-decoration: none;
     color: #3b413c;
+    padding: 1.5% 0;
 }
 
 .intro {
     display: flex;
     justify-content: space-between;
     padding: 1%;
-    margin: 0 auto;
+    margin: 0 -2%;
     align-items: flex-end;
 }
 
-.intro-img {
-    max-width: 251.5%;
+.intro-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
     min-width: 0;
-    height: auto;
+}
+
+.intro section {
+    margin: 0 2%;
 }
 
 .intro-text {
-    margin-left: 35%;
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
 }
 
 .projects-button {
@@ -126,8 +143,13 @@ nav a {
     text-decoration: none;
     color: #3b413c;
     background-color: #daf0ee;
-    margin: 6% 0 6% 0;
+    margin: 6% auto;
     transition-duration: 0.4s;
+}
+
+.projects-button:hover {
+    background: #3b413c;
+    color: #daf0ee;
 }
 
 .projects {
@@ -135,11 +157,12 @@ nav a {
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: space-between;
+    margin: 0 auto;
 }
 
 .project {
     display: flex;
-    flex: 1 0 21%;
+    flex: 1 0 calc(100% / 5);
     margin: 1%;
     flex-direction: column;
     align-items: center;
@@ -160,10 +183,23 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #9db5b2;
+    background: #9db5b2;
     width: 100%;
     height: 11rem;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0;
+}
+
+.contact-container {
+    width: 50%;
+    text-align: center;
+}
+
+footer nav {
+    text-align: center;
+}
+
+footer nav a {
+    transition-duration: 0.2s;
 }
 
 footer nav a:hover {
@@ -171,18 +207,73 @@ footer nav a:hover {
 }
 
 .contact-button {
-    padding: 10%;
+    padding: 3%;
     text-decoration: none;
     color: black;
-    background-color: #daf0ee;
+    background: #daf0ee;
     transition-duration: 0.4s;
 }
 
 .contact-button:hover {
-    background-color: #daf0ee;
-    color: #3b413c;
+    background: #3b413c;
+    color: #daf0ee;
 }
 
 i {
     font-size: 4rem;
+}
+
+@media(max-width: 800px) {
+    .project {
+        flex: 1 0 calc(100% / 4);
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .project {
+        flex: 1 0 calc(100% / 3);
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header {
+        align-items: center;
+        background-color: white;
+        border-bottom: none;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    header nav a {
+        width: 90%;
+        font-size: 2rem;
+        padding: 3% 0;
+    }
+
+    .intro {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    body {
+        font-size: 1.6rem;
+    }
 }
